@@ -1,0 +1,23 @@
+# Register User through a REST call 
+POST http://localhost:8078/user/saveUser HTTP/1.0
+Content-Type: application/json
+
+{
+    "username": "ds2525",
+    "password": "donotforgetme",
+    "email": "ds2525@gmail.com",
+    "roles": ["Admin","Manager"]
+}
+
+###
+POST http://localhost:8078/user/loginUser HTTP/1.0
+Content-Type: application/json
+
+{
+    "username": "ds2525",
+    "password": "donotforgetme"
+}
+
+###
+POST http://localhost:8078/user/getData HTTP/1.0
+Authorization: eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiI1Mzc5Iiwic3ViIjoiZHMyNTI1IiwiaXNzIjoiQUJDX0x0ZCIsImF1ZCI6IlhZWl9MdGQiLCJpYXQiOjE2MzgwODAxNTUsImV4cCI6MTYzODA4Mzc1NX0.slyMnCBCPUjjTaDPSFPbbcV3mCwJ4Tkbq3Aa6CI7QVn7KJn6y5FxNCRrBvLguAZRF4fdvz8CP9gvYRXxjKZC3Q
